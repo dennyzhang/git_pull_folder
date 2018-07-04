@@ -24,5 +24,38 @@ curl -L https://goo.gl/KFF9Ck | python
 
 In above `https://goo.gl/KFF9Ck` points to `https://raw.githubusercontent.com/dennyzhang/git_pull_folder/master/git_pull_folder.py`
 
+Example:
+
+In below example, we have two folders: cheatsheet and devops_public.
+
+Under cheatsheet, we have cheatsheet-emacs-A4 and cheatsheet-golang-A4.
+
+So run git_pull_folder.py will help to update all git repos.
+```
+.
+├── cheatsheet
+│   ├── cheatsheet-emacs-A4
+│   │   ├── .git
+│   │   ├── README.md
+│   │   ├── README.org
+...
+│   └── cheatsheet-golang-A4
+│   │   ├── .git
+│       ├── README.md
+│       ├── example_file.go
+...
+│       ├── misc
+│       │   └── pages.json
+└── devops_public
+    ├── LICENSE
+    │   ├── .git    
+    ├── README.md
+    ├── bash
+    │   ├── S3Sync
+    │   │   ├── README.md
+...
+
+66 directories, 196 files
+```
 # License
 - Code is licensed under [MIT License](https://www.dennyzhang.com/wp-content/mit_license.txt).
