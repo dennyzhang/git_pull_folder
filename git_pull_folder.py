@@ -9,7 +9,7 @@
 ## Description : https://github.com/dennyzhang/git_pull_folder
 ## --
 ## Created : <2018-07-03>
-## Updated: Time-stamp: <2018-07-03 17:02:31>
+## Updated: Time-stamp: <2018-07-03 17:03:23>
 ##-------------------------------------------------------------------
 import os, sys
 import subprocess
@@ -45,7 +45,7 @@ def git_pull(folder, max_depth):
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('--folder', default='', required=True, 
+    parser.add_argument('--folder', default='', required=False,
                         help="Which folder to run git pull. If not given, it's current directory'", type=str)
 
     parser.add_argument('--max_depth', default='2', required=False,
