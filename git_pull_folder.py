@@ -9,7 +9,7 @@
 ## Description : https://github.com/dennyzhang/git_pull_folder
 ## --
 ## Created : <2018-07-03>
-## Updated: Time-stamp: <2018-07-03 17:03:23>
+## Updated: Time-stamp: <2018-07-03 17:17:57>
 ##-------------------------------------------------------------------
 import os, sys
 import subprocess
@@ -22,7 +22,7 @@ def git_pull_folder(folder):
         command_output = subprocess.check_output(command, shell = True, stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as grepexc:
         print("Error. code: %d, errmsg: %s" % (grepexc.returncode, grepexc.output))
-        sys.ext(1)
+        sys.exit(1)
 
 def git_pull(folder, max_depth):
     print("Run git pull recursively under:" + folder)
@@ -39,7 +39,8 @@ def git_pull(folder, max_depth):
                     git_pull_folder(element)
                 else:
                     for f in l:
-                        queue.append("%s/%s" % (element, f))
+                        path = "%s/%s" % (element, f)
+                        if os.path.isdir(path): queue.append(path)
     print("Git pull is done")
 
 if __name__ == '__main__':
