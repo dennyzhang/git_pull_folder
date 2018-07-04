@@ -14,9 +14,14 @@ File me [tickets](https://github.com/DennyZhang/git_pull_folder/issues) or star 
 # How To Use
 For a given folder, recursive check all sub-folders. If we find one .git folder, run git pull.
 
-Thus we keep all git pull updated
+`https://goo.gl/KFF9Ck` points to `https://raw.githubusercontent.com/dennyzhang/git_pull_folder/master/git_pull_folder.py`
+
+Thus we keep all git folder updated.
 ```
-curl -L https://raw.githubusercontent.com/dennyzhang/git_pull_folder/master/git_pull_folder.py | python
+# go to the folder we want to update, run below:
+pip install git
+
+curl -L https://goo.gl/KFF9Ck | python
 ```
 
 # License
