@@ -55,7 +55,7 @@ So run git_pull_folder.py will help to update all git repos.
     │   │   ├── README.md
 ...
 
-66 directories, 196 files
+2 directories, 196 files
 ```
 # License
 - Code is licensed under [MIT License](https://www.dennyzhang.com/wp-content/mit_license.txt).
