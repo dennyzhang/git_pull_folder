@@ -9,15 +9,15 @@
 ## Description : https://github.com/dennyzhang/git_pull_folder
 ## --
 ## Created : <2018-07-03>
-## Updated: Time-stamp: <2018-07-03 17:17:57>
+## Updated: Time-stamp: <2018-07-09 15:10:40>
 ##-------------------------------------------------------------------
 import os, sys
 import subprocess
 
 def git_pull_folder(folder):
-    # git pull origin "$(git branch | awk -F' ' '{print $2}')"
+    # git pull origin "$(git branch | grep '^\*' | awk -F' ' '{print $2}')"
     try:
-        command = "cd %s && git pull origin \"$(git branch | awk -F' ' '{print $2}')\"" % (folder)
+        command = "cd %s && git pull origin \"$(git branch | grep '^\*' | awk -F' ' '{print $2}')\"" % (folder)
         print(command)
         command_output = subprocess.check_output(command, shell = True, stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as grepexc:
