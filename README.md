@@ -19,10 +19,8 @@ Thus we keep all git folder updated.
 # go to the folder we want to update, run below:
 pip install git
 
-curl -L https://goo.gl/KFF9Ck | python
+curl -L https://raw.githubusercontent.com/dennyzhang/git_pull_folder/master/git_pull_folder.py | python
 ```
-
-In above `https://goo.gl/KFF9Ck` points to `https://raw.githubusercontent.com/dennyzhang/git_pull_folder/master/git_pull_folder.py`
 
 Example:
 
